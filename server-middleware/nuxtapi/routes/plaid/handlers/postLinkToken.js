@@ -1,4 +1,3 @@
-import { config } from "../../../../../config";
 const axios = require("../../../axios/plaid");
 
 module.exports = (req, res, next) => {

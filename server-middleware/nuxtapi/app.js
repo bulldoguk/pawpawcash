@@ -12,6 +12,4 @@ app.use(
   })
 );
 
-console.log("app ready");
-
 module.exports = app;

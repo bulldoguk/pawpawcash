@@ -17,7 +17,19 @@ export default {
       .post("nuxtapi/plaid/postLinkToken", body)
       .then((resp) => {
         commit("SET_LINK_TOKEN", resp.data);
+        dispatchEvent('getAccessToken', resp.data.link_token)
       })
       .catch((e) => console.error(e));
+  },
+  getAccessToken({ commit }, linkToken) {
+    Plaid.create({
+      token: linkToken,
+      onSuccess: (public_token, metadata) => {
+        console.log("Success!", public_token, metadata);
+      },
+      onLoad: () => {},
+      onExit: (err, metadata) => {},
+      onEvent: (eventName, metadata) => {},
+    });
   },
 };

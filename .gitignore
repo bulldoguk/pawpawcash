@@ -1,5 +1,6 @@
 # Added by pawpawshouse
 config/plaid.js
+config/google.js
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template

@@ -1,3 +1,4 @@
 import plaid from './plaid'
+import google from './google'
 
-export { plaid }
+export { plaid, google }
